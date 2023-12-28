@@ -176,22 +176,6 @@
     }
     function placeOrder() {
         alert('You have placed your order successfully! Thank you for your shopping at Min982 Store.');
-
-        const userId = getSessionLoginUserId();
-        if (!userId) {
-            alert('Please login to see your cart.');
-            return;
-        }
-
-        const isCartCleared = dbClearCart(userId);
-
-        if (isCartCleared) {
-            changeMenuCartTotal(-1);
-            setCartValues('No product.', 0, 0);
-        } else {
-            alert('Failed to clear the cart. Please try again.');
-        }
-
         loadPage('home');
     }
 </script>
