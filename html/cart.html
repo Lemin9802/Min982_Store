@@ -19,7 +19,7 @@
 
         <div class='row mt-3'>
             <div class='col'>
-                <button class='btn btn-warning w-100'>Order</button>
+                <button class='btn btn-warning w-100' onclick='placeOrder()'>Order</button>
             </div>
         </div>
     </div>
@@ -173,5 +173,9 @@
         }
 
         alert('Failed to change quantity. Please try again.');
+    }
+    function placeOrder() {
+        alert('You have placed your order successfully! Thank you for your shopping at Min982 Store.');
+        loadPage('home');
     }
 </script>
